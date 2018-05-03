@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/axure_rp_page.css">
+    <link rel="stylesheet" href="css/jquery-ui-themes.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
+    <style>
+        .rate {
+            animation: animated_div 5s ease 1 forwards;
+        }
+        @keyframes animated_div {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+    <script>
+        function rotate(element) {
+            var reg = new RegExp("(\\s|^)rate(\\s|$)")
+            element.className = element.className.replace(reg, " ")
+            setTimeout(() => {
+                element.classList.add("rate")
+            }, 0);
+            
+        }
+        
+    </script>
+    <script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script>
+</head>
+<body>
+    <body>
+        <div id="base" class="">
+    
+          <!-- Unnamed (Group) -->
+          <div id="u0" class="ax_default" data-left="263" data-top="133" data-width="518.812255859375" data-height="518.812255859375">
+    
+            <!-- Unnamed (Image) -->
+            <div id="u1" class="ax_default _图片" style="cursor: pointer; transform: rotate(1129.52deg);" onclick="rotate(this)">
+              <img id="u1_img" class="img " src="img/u1.png" tabindex="0" style="">
+            </div>
+    
+            <!-- Unnamed (Triangle) -->
+            <div id="u2" class="ax_default box_1">
+              <img id="u2_img" class="img " src="img/u2.png">
+            </div>
+    
+            <!-- RandomText (Rectangle) -->
+            <div id="u3" class="ax_default label ax_default_hidden" data-label="RandomText" style="display:none; visibility: hidden">
+              <div id="u3_div" class=""></div>
+              <div id="u3_text" class="text " style="visibility: inherit;">
+                <p id="cache2"><span id="cache3">49.51958490157584</span></p>
+              </div>
+            </div>
+    
+            <!-- MessageText (Rectangle) -->
+            <!-- <div id="u4" class="ax_default label" data-label="MessageText" style="cursor: pointer;">
+              <div id="u4_div" class="" tabindex="0"></div>
+              <div id="u4_text" class="text " style="visibility: inherit;">
+                <p id="cache0"><span id="cache1">可惜了，您只中了幸运奖！</span></p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      
+    
+    </body>
+</body>
+</html>
