@@ -49,7 +49,7 @@
         e.stopPropagation();
         const i = e.target.innerText
         if (document.getElementById(i)) {
-          document.getElementById(i).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+          document.getElementById(i).scrollIntoView({ behavior: "smooth" })
         }
       }
     })()
