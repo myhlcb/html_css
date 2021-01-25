@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>monaco-editor</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,body,div,p,h1,h2,h3,h4,h5,h6 {
+      padding: 0;
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      padding: 0 24px;
+    }
+    .container {
+      height: calc(100vh - 80px);
+      border: 1px solid #bbb;
+      margin: 0 24px;
+    }
+    select {
+      display: inline-block;
+      height: 30px;
+      width: 200px;
+      font-size: 16px;
+      background-color: #fff;
+      border: 1px solid #bbb;
+      border-radius: 0;
+      vertical-align: middle;
+      color: #666;
+      padding: 4px 6px;
+      outline: none;
+    }
+    #type {
+      margin-right: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    学习monaco editor
+    <div>
+      <label for="type">language：</label>
+      <select name="type" id="type">
+        <option value="javascript">javascript</option>
+        <option value="json">json</option>
+        <option value="css">css</option>
+        <option value="html">html</option>
+        <option value="typescript">typescript</option>
+        <option value="sql">sql</option>
+      </select>
+      <label for="theme">theme：</label>
+      <select name="theme" id="theme">
+        <option value="vs">Visual Studio</option>
+        <option value="vs-dark">Visual Studio Dark</option>
+        <option value="hc-black">High Contrast Dark</option>
+      </select>
+    </div>
+  </header>
+  <main id="monaco" class="container"></main>
+</body>
+</html>

@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>可拖动输入和校验的表格</title>
   <style>
+    html, body, div, p, table, td, th {
+      margin: 0;
+      padding: 0; 
+    }
+    * {
+      box-sizing: border-box;
+    }
     .table {
       border-collapse: collapse;
     }
-    .table, .table td, .table th {
+
+    .table,
+    .table td,
+    .table th {
+      height: 40px;
+      min-width: 120px;
       border: 1px solid #ccc;
     }
 
     .table th {
       position: relative;
     }
+
     .resizer {
       /* Displayed at the right side of column */
       position: absolute;
@@ -25,11 +39,33 @@
       user-select: none;
     }
 
-    .resizer:hover, .resizing {
+    .resizer:hover,
+    .resizing {
       border-right: 2px solid blue;
+    }
+    /* td内部元素样式 */
+    td > div {
+      /* border: none; */
+      display: flex;
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+    td > div > input {
+      flex: 1;
+      /* min-width: 80px; */
+      width: 80px;
+      height: 100%;
+      outline: none;
+      padding: 0 8px;
+      border-radius: 0;
+    }
+    td > div > input:focus {
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
     }
   </style>
 </head>
+
 <body>
   <table class="table" id="resizeMe">
     <thead>
@@ -45,13 +81,19 @@
   <script>
     const tbody = document.getElementById('tbody')
     const names = Array(12).fill('Andrea Ross')
-    names.forEach((item, index) => {
+    names.forEach((item, i) => {
       const tr = document.createElement('tr')
       const arr = item.split(' ')
-      arr.unshift(index)
-      arr.forEach((item) => {
+      arr.unshift(i)
+      arr.forEach((item, j) => {
         const td = document.createElement('td')
-        td.innerText = item
+        // td.innerText = item
+        const div = document.createElement('div')
+        const input = document.createElement('input')
+        // input.value = `${i} - ${j}`
+        input.pattern = '[0-9]{3}'
+        div.appendChild(input)
+        td.appendChild(div)
         tr.appendChild(td)
       })
       tbody.appendChild(tr)
@@ -106,4 +148,5 @@
     });
   </script>
 </body>
+
 </html>
