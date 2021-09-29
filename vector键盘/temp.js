@@ -3,8 +3,10 @@
  * @description This interactive demonstrates how key board input can be used to add interactivity.
  * @tags [input]
  */
-import { Interactive, getScriptName } from "../../index.js";
-let interactive = new Interactive(getScriptName());
+// import { Interactive, getScriptName } from "../../index.js";
+// let interactive = new Interactive(getScriptName());
+import Interactive from "https://vectorjs.org/interactive.js";
+let interactive = new Interactive("keyboard");
 interactive.width = 768;
 interactive.height = 300;
 interactive.border = true;
