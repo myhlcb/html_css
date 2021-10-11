@@ -58,6 +58,18 @@
       height: 24px;
       background-color: #ffffff;
     }
+    .func-wrap {
+      filter: drop-shadow(0 3px 0 red) drop-shadow(-3px 0 0 red);
+    }
+    .func {
+      position: absolute;
+      left: 500px;
+      top: 100px;
+      height: 32px;
+      width: 80px;
+      background: rgba(7,10,26,0.84);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%);
+    }
   </style>
 </head>
 
@@ -70,6 +82,10 @@
       dfasdfasd
     </div>
   </div>
+  <div class="func-wrap">
+    <div class="func"></div>
+  </div>
+  
 </body>
 
 </html>
