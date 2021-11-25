@@ -1,12 +1,8 @@
 const Koa = require('koa');
+const serve = require('koa-static')
 const app = new Koa();
 
-app.use(async (ctx) => {
-  console.log(ctx);
-  ctx.body = 'Hello World';
-});
-
-
+app.use(serve('dist'));
 
 app.listen(3066, () => {
   console.log("listen port is 3066");

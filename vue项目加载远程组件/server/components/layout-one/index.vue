@@ -7,8 +7,12 @@ export default {
   title: "布局一",
   data() {
     return {}
+  },
+  created() {
+    console.log('caodanwanyi created');
+  },
+  mounted() {
+    console.log('one moutend');
   }
 }
 </script>
-<style lang="scss" scoped>
-</style>
