@@ -1,0 +1,23 @@
+{
+  "name": "components-server",
+  "version": "1.0.0",
+  "description": "vue load remote components demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn",
+    "vue",
+    "component"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "rollup": "^2.60.1"
+  }
+}
