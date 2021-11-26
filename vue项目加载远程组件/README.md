@@ -28,3 +28,7 @@ npm run serve
 打开页面，点击顶部 `remote`连接，即可看到远程加载的组件
 
 **注意：rollup-plugin-vue在这里必须为5.x版本**
+
+### 参考连接
+- https://markus.oberlehner.net/blog/distributed-vue-applications-loading-components-via-http
+- https://juejin.cn/post/6992483283187531789
