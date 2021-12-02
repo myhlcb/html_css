@@ -122,10 +122,57 @@
         opacity:0
       }
     }
+    /* 四边 */
+    .frost {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .frost .frame_sprite {
+      position: absolute;
+      height: 100px;
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: center bottom;
+      background-image: url(./image/border-ice.png);
+    }
+    .frost .frame_left {
+      top: -133px;
+      left: 0;
+      transform: rotate(90deg);
+      transform-origin: 0 100px;
+      pointer-events: none;
+      width: 500%;
+    }
+    .frost .frame_right {
+      top: 100%;
+      left: calc(100% - 100px);
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+      width: 500%;
+      pointer-events: none;
+    }
+    .frost .frame_top {
+      top: 0;
+      width: 500%;
+      transform: rotate(180deg);
+      pointer-events: none;
+    }
+    .frost .frame_bottom {
+      bottom: 0;
+      left: 0;
+      width: 500%;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <div id="snow_container" class="snow">
+  <div class="snow">
     <div class="snow_slice snow_1">
       <div class="snow_drifter drift_1"></div>
     </div>
@@ -138,6 +185,12 @@
     <div class="snow_slice snow_4">
       <div class="snow_drifter drift_4"></div>
     </div>
+  </div>
+  <div class="frost">
+    <div class="frame_sprite frame_left"></div>
+    <div class="frame_sprite frame_right"></div>
+    <div class="frame_sprite frame_top"></div>
+    <div class="frame_sprite frame_bottom"></div>
   </div>
 </body>
 </html>
