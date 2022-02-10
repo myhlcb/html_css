@@ -66,22 +66,22 @@
     //   isNight = !isNight;
     // }
     // 第二种
-    // var root = document.documentElement
-    // var isNight = false;
-    // function changeTheme() {
-    //   if (isNight) {
-    //     root.style.setProperty('--main-bg', '#031f30');
-    //     root.style.setProperty('--content-bg', '#0e161b');
-    //     root.style.setProperty('--primary-color', '#fff');
-    //     root.style.setProperty('--secondary-color', '#9cd4f7');
-    //   } else {
-    //     root.style.setProperty('--main-bg', '#fff');
-    //     root.style.setProperty('--content-bg', '#fff');
-    //     root.style.setProperty('--primary-color', '#33444d');
-    //     root.style.setProperty('--secondary-color', '#999');
-    //   }
-    //   isNight = !isNight;
-    // }
+    var root = document.documentElement
+    var isNight = false;
+    function changeTheme() {
+      if (isNight) {
+        root.style.setProperty('--main-bg', '#031f30');
+        root.style.setProperty('--content-bg', '#0e161b');
+        root.style.setProperty('--primary-color', '#fff');
+        root.style.setProperty('--secondary-color', '#9cd4f7');
+      } else {
+        root.style.setProperty('--main-bg', '#fff');
+        root.style.setProperty('--content-bg', '#fff');
+        root.style.setProperty('--primary-color', '#33444d');
+        root.style.setProperty('--secondary-color', '#999');
+      }
+      isNight = !isNight;
+    }
   </script>
 </body>
 </html>
