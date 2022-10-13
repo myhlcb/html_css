@@ -37,24 +37,15 @@
     const nodeList = document.getElementsByClassName('draggable');
     console.log(nodeList);
     [...nodeList].forEach(el => {
-      const { x, y } = el.getBoundingClientRect()
-      const startX = x;
-      const startY = y;
-      console.log(x,y);
       el.addEventListener('dragstart', (e)=> {
-        // const { clinetX, pageY } = e
-        console.log('dragstart', e);
-        e.dataTransfer.layerX = e.offsetX
-        e.dataTransfer.layerY = e.OffsetY
-        console.log('dragstart offset', e.offsetX, e.offsetY);
+        e.dataTransfer.clientX = e.clientX
+        e.dataTransfer.clientY = e.clientY
       })
       el.addEventListener('dragend', (e)=> {
-        const { clientX, clientY, dataTransfer: {layerX,layerY} } = e
-        // const {startX, startY} = el.dataset
-        console.log();
-        console.log(startX, startY);
-        console.log('dragend', e);
-        el.style.transform = `translate(${clientX - startX}px, ${clientY- startY}px)`
+        const { clientX, clientY, dataTransfer: {clientX: scx,clientY: scy} } = e
+        const [ tX, tY ] = (el.style.transform || '').match(/-?\d+/g) || [0, 0]
+        console.log(tX, tY);
+        el.style.transform = `translate(${+tX + clientX - scx}px, ${+tY + clientY - scy}px)`
       })
     });
   </script>
